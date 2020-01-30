@@ -45,7 +45,9 @@ console.log(location2.randomCust());
 
 // Loop for second location
 for(var j = 0; j < storeHours.length; j++){
+    console.log(location.name, storeHours[j]);
   var hourlySoldCookiesTokyo = location2.avgCookieSale * location2.randomCust;
+  console.log(hourlySoldCookies);
   var listElement = document.createElement('li');
   listElement.textContent = `${storeHours} ${hourlySoldCookiesTokyo} cookies.`;
 }
@@ -65,7 +67,9 @@ console.log(location3.randomCust());
 
 // Loop for third location
 for(var k = 0; k < storeHours.length; k++){
+    console.log(location.name, storeHours[k]);
   var hourlySoldCookiesDubai = location3.avgCookieSale * location3.randomCust;
+  console.log(hourlySoldCookies);
   var listElement = document.createElement('li');
   listElement.textContent = `${storeHours} ${hourlySoldCookiesDubai} cookies`;
 }
@@ -85,7 +89,9 @@ console.log(location4.randomCust());
 
 // Loop for fourth location
 for(var l = 0; l < storeHours.length; l++){
+    console.log(location.name, storeHours[l]);
   var hourlySoldCookiesParis = location4.avgCookieSale * location4.randomCust;
+  console.log(hourlySoldCookies);
   var listElement = document.createElement('li');
   listElement.textContent = `${storeHours} ${hourlySoldCookiesParis} cookies`;
 }
@@ -105,7 +111,9 @@ console.log(location5.randomCust());
 
 // Loop for fifth location
 for(var m = 0; m < storeHours.length; m++){
+    console.log(location.name, storeHours[m]);
   var hourlySoldCookiesLima = location5.avgCookieSale * location5.randomCust;
+  console.log(hourlySoldCookies);
   var listElement = document.createElement('li');
   listElement.textContent = `${storeHours} ${hourlySoldCookiesLima} cookies`;
 }
