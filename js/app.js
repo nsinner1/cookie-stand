@@ -111,23 +111,26 @@ location4.randomCust();
 
 
 // Object for fifth location
-// var location5 = {
-//   name: 'Lima',
-//   minHourlyCust: 2,
-//   maxHourlyCust: 16,
-//   avgCookieSale: 4.6,
-//   randomCust: function getRandomIntInclusive(){
-//     return Math.round(Math.random() * (this.minHourlyCust, this.maxHourlyCust) + this.minHourlyCust);
-//   }
-// };
-// console.log(location5.name);
-// console.log(location5.randomCust());
+var location5 = {
+  name: 'Lima',
+  minHourlyCust: 2,
+  maxHourlyCust: 16,
+  avgCookieSale: 4.6,
+  totalCookies: 0,
+  randomCust: function getRandomIntInclusive(){
+    var limaElement = document.getElementById('Lima');
+    for(var m = 0; m < storeHours.length; m++){
+      var hourlySoldCookies = (Math.round(this.avgCookieSale * Math.random() * (this.minHourlyCust, this.maxHourlyCust) + this.minHourlyCust));
+      this.totalCookies += hourlySoldCookies;
 
-// Loop for fifth location
-// for(var m = 0; m < storeHours.length; m++){
-//     console.log(location.name, storeHours[m]);
-//   var hourlySoldCookiesLima = location5.avgCookieSale * location5.randomCust;
-//   console.log(hourlySoldCookies);
-//   var listElement = document.createElement('li');
-//   listElement.textContent = `${storeHours} ${hourlySoldCookiesLima} cookies`;
-// }
+      var listElement = document.createElement('li');
+      listElement.textContent = `${storeHours[m]} ${hourlySoldCookies} cookies.`;
+      limaElement.appendChild(listElement);
+    }
+    var totalElement = document.getElementById('Total5');
+    var listElement = document.createElement('li');
+    listElement.textContent = `${totalSoldCookies} ${this.totalCookies} cookies.`;
+    totalElement.appendChild(listElement);
+  }
+};
+location5.randomCust();
