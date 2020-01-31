@@ -60,48 +60,55 @@ location2.randomCust();
 
 
 // Object for third location
-// var location3 = {
-//   name: 'Dubai',
-//   minHourlyCust: 11,
-//   maxHourlyCust: 38,
-//   avgCookieSale: 3.7,
-//   randomCust: function getRandomIntInclusive(){
-//     return Math.round(Math.random() * (this.minHourlyCust, this.maxHourlyCust) + this.minHourlyCust);
-//   }
-// };
-// console.log(location3.name);
-// console.log(location3.randomCust());
+var location3 = {
+  name: 'Dubai',
+  minHourlyCust: 11,
+  maxHourlyCust: 38,
+  avgCookieSale: 3.7,
+  totalCookies: 0,
+  randomCust: function getRandomIntInclusive(){
+    var dubaiElement = document.getElementById('Dubai');
+    for(var k = 0; k < storeHours.length; k++){
+      var hourlySoldCookies = (Math.round(this.avgCookieSale * Math.random() * (this.minHourlyCust, this.maxHourlyCust) + this.minHourlyCust));
+      this.totalCookies += hourlySoldCookies;
 
-// Loop for third location
-// for(var k = 0; k < storeHours.length; k++){
-//     console.log(location.name, storeHours[k]);
-//   var hourlySoldCookiesDubai = location3.avgCookieSale * location3.randomCust;
-//   console.log(hourlySoldCookies);
-//   var listElement = document.createElement('li');
-//   listElement.textContent = `${storeHours} ${hourlySoldCookiesDubai} cookies`;
-// }
+      var listElement = document.createElement('li');
+      listElement.textContent = `${storeHours[k]} ${hourlySoldCookies} cookies.`;
+      dubaiElement.appendChild(listElement);
+    }
+    var totalElement = document.getElementById('Total3');
+    var listElement = document.createElement('li');
+    listElement.textContent = `${totalSoldCookies} ${this.totalCookies} cookies.`;
+    totalElement.appendChild(listElement);
+  }
+};
+location3.randomCust();
 
 // Object for fourth location
-// var location4 = {
-//   name: 'Paris',
-//   minHourlyCust: 20,
-//   maxHourlyCust: 38,
-//   avgCookieSale: 2.3,
-//   randomCust: function getRandomIntInclusive(){
-//     return Math.round(Math.random() * (this.minHourlyCust, this.maxHourlyCust) + this.minHourlyCust);
-//   }
-// };
-// console.log(location4.name);
-// console.log(location4.randomCust());
+var location4 = {
+  name: 'Paris',
+  minHourlyCust: 20,
+  maxHourlyCust: 38,
+  avgCookieSale: 2.3,
+  totalCookies: 0,
+  randomCust: function getRandomIntInclusive(){
+    var parisElement = document.getElementById('Paris');
+    for(var l = 0; l < storeHours.length; l++){
+      var hourlySoldCookies = (Math.round(this.avgCookieSale * Math.random() * (this.minHourlyCust, this.maxHourlyCust) + this.minHourlyCust));
+      this.totalCookies += hourlySoldCookies;
 
-// Loop for fourth location
-// for(var l = 0; l < storeHours.length; l++){
-//     console.log(location.name, storeHours[l]);
-//   var hourlySoldCookiesParis = location4.avgCookieSale * location4.randomCust;
-//   console.log(hourlySoldCookies);
-//   var listElement = document.createElement('li');
-//   listElement.textContent = `${storeHours} ${hourlySoldCookiesParis} cookies`;
-// }
+      var listElement = document.createElement('li');
+      listElement.textContent = `${storeHours[l]} ${hourlySoldCookies} cookies.`;
+      parisElement.appendChild(listElement);
+    }
+    var totalElement = document.getElementById('Total4');
+    var listElement = document.createElement('li');
+    listElement.textContent = `${totalSoldCookies} ${this.totalCookies} cookies.`;
+    totalElement.appendChild(listElement);
+  }
+};
+location4.randomCust();
+
 
 // Object for fifth location
 // var location5 = {
