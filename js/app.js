@@ -6,6 +6,8 @@ var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2p
 
 var locationGlobal = [];
 
+
+
 function CookieLocation(name, minHourlyCust, maxHourlyCust, avgCookieSale){
   this.name = name;
   this.minHourlyCust = minHourlyCust;
@@ -31,52 +33,80 @@ CookieLocation.prototype.cookiesEachHour = function(){
 };
 
 CookieLocation.prototype.render = function(){
-  var parentElement = document.getElementById('Seattle');
-  var listElement = document.createElement('li');
-  listElement.textContent = this.name;
-  parentElement.appendChild(listElement);
-  for(var i = 0; i < storeHours.length; i++){
-    listElement = document.createElement('li');
-    listElement.textContent = storeHours[i] + ': ' + this.dailyCookieSales[i] + ' cookies';
-    // just need daily cookies sales
-    parentElement.appendChild(listElement);
+  var parentElement = document.getElementById('header');
+  var rowElement = document.createElement('tr');
+  parentElement.appendChild(rowElement);
+  var nameElement = document.createElement('th');
+  nameElement.textContent = this.name;
+  rowElement.appendChild(nameElement);
+  var col = 1;
+  for(var i = 0; i < this.dailyCookieSales.length; i++){
+    var cell = rowElement.insertCell(col);
+    cell.textContent = this.dailyCookieSales[i];
+    col++;
   }
-  listElement = document.createElement('li');
-  listElement.textContent = 'Total: ' + this.totalCookies;
-  parentElement.appendChild(listElement);
 };
+
+// var dataElement = document.createElement('td');
+// dataElement.textContent = this.dailyCookieSales[i];
+// just need daily cookies sales
+//     parentElement.appendChild(listElement);
+//   }
+//   listElement = document.createElement('li');
+//   listElement.textContent = 'Total: ' + this.totalCookies;
+//   parentElement.appendChild(listElement);
+// };
 
 
 new CookieLocation('Seattle', 23, 65, 6.3);
-console.log(locationGlobal[0].dailyCookieSales);
-console.log(locationGlobal[0].randomCust());
-console.log(locationGlobal[0].cookiesEachHour());
-console.log(locationGlobal[0].render());
+// console.log(locationGlobal[0].dailyCookieSales);
+// console.log(locationGlobal[0].randomCust());
+// console.log(locationGlobal[0].cookiesEachHour());
+// console.log(locationGlobal[0].render());
 
 new CookieLocation('Tokyo', 3, 24, 1.2);
-console.log(locationGlobal[1].dailyCookieSales);
-console.log(locationGlobal[1].randomCust());
-console.log(locationGlobal[1].cookiesEachHour());
-console.log(locationGlobal[1].render());
+// console.log(locationGlobal[1].dailyCookieSales);
+// console.log(locationGlobal[1].randomCust());
+// console.log(locationGlobal[1].cookiesEachHour());
+// console.log(locationGlobal[1].render());
 
 new CookieLocation('Dubai', 11, 38, 3.7);
-console.log(locationGlobal[2].dailyCookieSales);
-console.log(locationGlobal[2].randomCust());
-console.log(locationGlobal[2].cookiesEachHour());
-console.log(locationGlobal[2].render());
+// console.log(locationGlobal[2].dailyCookieSales);
+// console.log(locationGlobal[2].randomCust());
+// console.log(locationGlobal[2].cookiesEachHour());
+// console.log(locationGlobal[2].render());
 
 new CookieLocation('Paris', 20, 38, 2.3);
-console.log(locationGlobal[3].dailyCookieSales);
-console.log(locationGlobal[3].randomCust());
-console.log(locationGlobal[3].cookiesEachHour());
-console.log(locationGlobal[3].render());
+// console.log(locationGlobal[3].dailyCookieSales);
+// console.log(locationGlobal[3].randomCust());
+// console.log(locationGlobal[3].cookiesEachHour());
+// console.log(locationGlobal[3].render());
 
 new CookieLocation('Lima', 2, 16, 4.6);
-console.log(locationGlobal[4].dailyCookieSales);
-console.log(locationGlobal[4].randomCust());
-console.log(locationGlobal[4].cookiesEachHour());
-console.log(locationGlobal[4].render());
+// console.log(locationGlobal[4].dailyCookieSales);
+// console.log(locationGlobal[4].randomCust());
+// console.log(locationGlobal[4].cookiesEachHour());
+// console.log(locationGlobal[4].render());
 
+function tableHeader(){
+    var headerElement = document.getElementById('header');
+    var headerHour = document.createElement('th');
+    headerElement.appendChild(headerHour);
+for(var x = 0; x < storeHours.length; x++){
+//   var headerElement = document.getElementById('header');
+  headerHour = document.createElement('th');
+  headerHour.textContent = storeHours[x];
+  headerElement.appendChild(headerHour);
+}
+}
+
+tableHeader();
+
+for(var f = 0; f < locationGlobal.length; f++){
+  locationGlobal[f].randomCust();
+  locationGlobal[f].cookiesEachHour();
+  locationGlobal[f].render();
+}
 
 
 
