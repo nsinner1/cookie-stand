@@ -95,3 +95,23 @@ main {
 div > li {
   display: inline-block
 }
+
+#seattleLocation {
+  /* border: 1px solid black; */
+  margin-top: 30px;
+  margin-left: 90px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+#tokyoLocation, #dubiaLocation, #parisLocation {
+  /* border: 1px solid black; */
+  margin-right: 40px;
+  margin-bottom: 30px;
+}
+
+#limaLocation {
+  /* border: 1px solid black; */
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
