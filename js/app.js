@@ -19,7 +19,7 @@ function CookieLocation(name, minHourlyCust, maxHourlyCust, avgCookieSale){
   locationGlobal.push(this);
 }
 
-console.log(locationGlobal[0]);
+// console.log(locationGlobal[0]);
 
 CookieLocation.prototype.randomCust = function(){
   return (Math.floor(Math.random() * (this.maxHourlyCust - this.minHourlyCust +1)) + this.minHourlyCust);
