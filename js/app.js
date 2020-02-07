@@ -1,5 +1,6 @@
 'use strict';
 
+
 var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 // var locations = ['Seattle', 'Tokyo', 'Dubai', 'Paris', 'Lima'];
 // var totalSoldCookies = ['Total'];
@@ -47,57 +48,22 @@ CookieLocation.prototype.render = function(){
   }
 };
 
-// var dataElement = document.createElement('td');
-// dataElement.textContent = this.dailyCookieSales[i];
-// just need daily cookies sales
-//     parentElement.appendChild(listElement);
-//   }
-//   listElement = document.createElement('li');
-//   listElement.textContent = 'Total: ' + this.totalCookies;
-//   parentElement.appendChild(listElement);
-// };
-
-
 new CookieLocation('Seattle', 23, 65, 6.3);
-// console.log(locationGlobal[0].dailyCookieSales);
-// console.log(locationGlobal[0].randomCust());
-// console.log(locationGlobal[0].cookiesEachHour());
-// console.log(locationGlobal[0].render());
-
 new CookieLocation('Tokyo', 3, 24, 1.2);
-// console.log(locationGlobal[1].dailyCookieSales);
-// console.log(locationGlobal[1].randomCust());
-// console.log(locationGlobal[1].cookiesEachHour());
-// console.log(locationGlobal[1].render());
-
 new CookieLocation('Dubai', 11, 38, 3.7);
-// console.log(locationGlobal[2].dailyCookieSales);
-// console.log(locationGlobal[2].randomCust());
-// console.log(locationGlobal[2].cookiesEachHour());
-// console.log(locationGlobal[2].render());
-
 new CookieLocation('Paris', 20, 38, 2.3);
-// console.log(locationGlobal[3].dailyCookieSales);
-// console.log(locationGlobal[3].randomCust());
-// console.log(locationGlobal[3].cookiesEachHour());
-// console.log(locationGlobal[3].render());
-
 new CookieLocation('Lima', 2, 16, 4.6);
-// console.log(locationGlobal[4].dailyCookieSales);
-// console.log(locationGlobal[4].randomCust());
-// console.log(locationGlobal[4].cookiesEachHour());
-// console.log(locationGlobal[4].render());
+
 
 function tableHeader(){
-    var headerElement = document.getElementById('header');
-    var headerHour = document.createElement('th');
-    headerElement.appendChild(headerHour);
-for(var x = 0; x < storeHours.length; x++){
-//   var headerElement = document.getElementById('header');
-  headerHour = document.createElement('th');
-  headerHour.textContent = storeHours[x];
+  var headerElement = document.getElementById('header');
+  var headerHour = document.createElement('th');
   headerElement.appendChild(headerHour);
-}
+  for(var x = 0; x < storeHours.length; x++){
+    headerHour = document.createElement('th');
+    headerHour.textContent = storeHours[x];
+    headerElement.appendChild(headerHour);
+  }
 }
 
 tableHeader();
