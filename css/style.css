@@ -1,9 +1,36 @@
+
 body{
-  background-color: royalblue;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+#salmon {
+  /* border: 1px solid black; */
+  height: 100px;
+  width: 300px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+header > ul > li {
+  display: inline-block;
+}
+
+#home {
+  /* border: 1px solid black; */
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 40px;
+}
+
+#sales {
+  /* border: 1px solid black; */
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 40px;
+}
+
+
 main {
-  border: 1px solid green;
-  
+  border: 1px solid black;
 }
