@@ -40,6 +40,9 @@ CookieLocation.prototype.render = function(){
   var nameElement = document.createElement('th');
   nameElement.textContent = this.name;
   rowElement.appendChild(nameElement);
+  var totalsCell = document.createElement('th');
+  totalsCell.textContent = 'Daily Total: ' + this.totalCookies;
+  rowElement.appendChild(totalsCell);
   var col = 1;
   for(var i = 0; i < this.dailyCookieSales.length; i++){
     var cell = rowElement.insertCell(col);
@@ -47,7 +50,6 @@ CookieLocation.prototype.render = function(){
     col++;
   }
 };
-
 
 
 new CookieLocation('Seattle', 23, 65, 6.3);
@@ -68,10 +70,7 @@ function tableHeader(){
   }
 }
 
-// function tal
-// var totalsCell = document.createElement('th');
-// totalsCell.textContent = 'Daily Location Totals';
-// parentElement.appendChild(totalsCell);
+
 
 tableHeader();
 
