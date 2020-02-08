@@ -48,6 +48,8 @@ CookieLocation.prototype.render = function(){
   }
 };
 
+
+
 new CookieLocation('Seattle', 23, 65, 6.3);
 new CookieLocation('Tokyo', 3, 24, 1.2);
 new CookieLocation('Dubai', 11, 38, 3.7);
@@ -66,6 +68,11 @@ function tableHeader(){
   }
 }
 
+// function tal
+// var totalsCell = document.createElement('th');
+// totalsCell.textContent = 'Daily Location Totals';
+// parentElement.appendChild(totalsCell);
+
 tableHeader();
 
 for(var f = 0; f < locationGlobal.length; f++){
@@ -73,6 +80,35 @@ for(var f = 0; f < locationGlobal.length; f++){
   locationGlobal[f].cookiesEachHour();
   locationGlobal[f].render();
 }
+
+
+
+
+
+var userData = [];
+
+var userForm = document.getElementById('addStore');
+
+userForm.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  var storeName = event.target.elementStoreName.value;
+  var minCustomers = event.target.elementMinCustomers.value;
+  var maxCustomers = event.target.elementMaxCustomers.value;
+  var avgCustomers = event.target.elementAvgCustomers.value;
+  userData.push(storeName, minCustomers, maxCustomers, avgCustomers);
+
+  console.log(storeName, minCustomers, maxCustomers, avgCustomers);
+
+  event.target.elementStoreName.value = null;
+  event.target.elementMinCustomers.value = null;
+  event.target.elementMaxCustomers.value = null;
+  event.target.elementAvgCustomers.value = null;
+
+
+}
+
 
 
 
