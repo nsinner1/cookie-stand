@@ -87,7 +87,7 @@ function tableFooter(){
   footerElement.appendChild(footerRow);
   for(var y = 0; y < hourlyTotal.length; y++){
     footerTotal = document.createElement('th');
-    footerTotal.textContent = hourlyTotal[y];
+    footerTotal.textContent = 'Hourly total: ' + hourlyTotal[y];
     footerRow.appendChild(footerTotal);
   }
 }
