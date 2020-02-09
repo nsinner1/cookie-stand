@@ -81,12 +81,14 @@ tableHeader();
 
 function tableFooter(){
   var footerElement = document.getElementById('footer');
+  var footerRow = document.createElement('tr');
   var footerTotal = document.createElement('th');
-  footerElement.appendChild(footerTotal);
+  footerRow.appendChild(footerTotal);
+  footerElement.appendChild(footerRow);
   for(var y = 0; y < hourlyTotal.length; y++){
     footerTotal = document.createElement('th');
     footerTotal.textContent = hourlyTotal[y];
-    footerElement.appendChild(footerTotal);
+    footerRow.appendChild(footerTotal);
   }
 }
 
@@ -100,10 +102,6 @@ for(var f = 0; f < locationGlobal.length; f++){
 tableFooter();
 
 
-
-
-var userData = [];
-
 var userForm = document.getElementById('addStore');
 
 userForm.addEventListener('submit', handleSubmit);
@@ -114,7 +112,6 @@ function handleSubmit(event) {
   var minCustomers = event.target.elementMinCustomers.value;
   var maxCustomers = event.target.elementMaxCustomers.value;
   var avgCustomers = event.target.elementAvgCustomers.value;
-  userData.push(storeName, minCustomers, maxCustomers, avgCustomers);
 
   console.log(storeName, minCustomers, maxCustomers, avgCustomers);
 
@@ -123,8 +120,18 @@ function handleSubmit(event) {
   event.target.elementMaxCustomers.value = null;
   event.target.elementAvgCustomers.value = null;
 
+  new CookieLocation(storeName, minCustomers, maxCustomers, avgCustomers);
 
+  var d = locationGlobal.length-1;
+
+  locationGlobal[d].randomCust();
+  locationGlobal[d].cookiesEachHour();
+  locationGlobal[d].render();
+
+  document.getElementById('footer').deleteRow(0);
+  tableFooter();
 }
+
 
 
 
