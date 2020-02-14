@@ -7,57 +7,46 @@
     </head>
     <body>
         <header>
-            <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="html/sales.html">Sales</a></li>
-            </ul>
+            <nav>
+                <ul>
+                    <li><img id="salmon" src="../img/salmon.png"></li>
+                    <li id="home"><a href="../index.html">Home</a></li>
+                    <li id="sales"><a href="html/sales.html">Sales</a></li>
+                    <li id="hoursLocations">Hours and Locations</li>
+                    <li id="contactUs">Contact Us</li>
+                    <li><img id="chinook" src="../img/chinook2.png"></li>
+                </ul>
+            </nav>
         </header>
     <main>
-        <h1>Salmon Cookies Location and Total Cookies</h1>
-
-        <table id="header">
+        <h1>Total Cookies Sold</h1>
+            <table id="header">
                 <tfoot id="footer"></tfoot>
-        </table>
-
-        <!-- <tfoot id="footer"></tfoot> -->
-
+            </table>
         <ul id="Seattle"></ul>
-
-        <!-- <h2>Tokyo</h2>
-        <ul id="Tokyo"></ul>
-
-        <h2>Dubai</h2>
-        <ul id="Dubai"></ul>
-
-        <h2>Paris</h2>
-        <ul id="Paris"></ul>
-
-        <h2>Lima</h2>
-        <ul id="Lima"></ul>  -->
-
-    </main>  
-    <section>
+        <section>
+                <h2>Enter a New Store Location</h2>
+                <form id="addStore">
+                    <fieldset>
+                        <label>Enter Store Name:</label>
+                        <input id="elementStoreName" type="text" placeholder="Enter Store Name">
         
-        <form id="addStore">
-            <fieldset>
-                <label>Enter Store Name:</label>
-                <input id="elementStoreName" type="text" placeholder="Enter Store Name Here">
-
-                <label>Enter Minimum Customers:</label>
-                <input id="elementMinCustomers" type="text" placeholder="Enter Minimum Number of Customers">
-
-                <label>Enter Maximum Customers:</label>
-                <input id="elementMaxCustomers" type="text" placeholder="Enter Maximum Number of Customers">
-
-                <label>Enter Average Number of Customers:</label>
-                <input id="elementAvgCustomers" type="text" placeholder="Enter Average Number of Customers">
-
-                <button value="submit">Submit</button>
-            </fieldset>
-        </form>
-    </section>  
-
-
+                        <label>Enter Minimum Customers:</label>
+                        <input id="elementMinCustomers" type="text" placeholder="Enter Minimum Number of Customers">
+        
+                        <label>Enter Maximum Customers:</label>
+                        <input id="elementMaxCustomers" type="text" placeholder="Enter Maximum Number of Customers">
+        
+                        <label>Enter Average Number of Customers:</label>
+                        <input id="elementAvgCustomers" type="text" placeholder="Enter Average Number of Customers">
+        
+                        <button value="submit">Submit</button>
+                    </fieldset>
+                </form>
+            </section>  
+    </main>   
     <script type="text/javascript" src="../js/app.js"></script>
     </body>
+    <footer>
+    </footer>
 </html>

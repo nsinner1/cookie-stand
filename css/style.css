@@ -1,6 +1,6 @@
 
-body{
-  background-color: #B7D3F2;
+body {
+  background-color: #709255;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color:
 }
@@ -10,7 +10,6 @@ header > nav > ul > li {
 }
 
 #salmon {
-  /* border: 1px solid black; */
   height: 100px;
   width: 300px;
   margin-left: 80px;
@@ -18,53 +17,54 @@ header > nav > ul > li {
 }
 
 #home {
-  /* border: 1px solid black; */
+  color: #172815;
   margin-left: 50px;
   margin-right: 30px;
   font-size: 30px;
 }
 
 #sales {
-  /* border: 1px solid black; */
+  color: #172815;
   margin-left: 30px;
   margin-right: 30px;
   font-size: 30px;
 }
 
 #hoursLocations {
-  /* border: 1px solid black; */
+  color: #172815;
   margin-left: 30px;
   margin-right: 30px;
   font-size: 30px;
+  text-decoration: underline;
 }
 
 #contactUs {
-  /* border: 1px solid black; */
+  color: #172815;
   margin-left: 30px;
   margin-right: 50px;
   font-size: 30px;
+  text-decoration: underline;
 }
 #chinook {
   height: 100px;
   width: 300px;
   margin-left: 30px;
   margin-top: 20px;
-  background-color: #B7D3F2;
-}
-main {
-  border: 1px solid black;
+  background-color: #709255;
 }
 
 #title {
   font-size: 200px;
   text-align: center;
   font-family: 'Lato', sans-serif;
-  color: #AFAFDC;
+  color: #83781B;
 }
 
 #slogen {
   font-size: 60px;
   text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: #83781B;
 }
 
 #family {
@@ -76,6 +76,7 @@ main {
 }
 
 #firstIntro {
+  color: #172815;
   text-align: center;
   margin-top: 30px;
   margin-left: 85px;
@@ -84,6 +85,7 @@ main {
 }
 
 #secondIntro {
+  color: #172815;
   text-align: center;
   margin-bottom: 30px;
   margin-left: 85px;
@@ -94,7 +96,7 @@ main {
 #whereToFindUs {
   font-size: 75px;
   text-align: center;
-  color: #AFAFDC;
+  color: #83781B;
 }
 
 div > li {
@@ -102,7 +104,7 @@ div > li {
 }
 
 #seattleLocation {
-  /* border: 1px solid black; */
+  color: #172815;
   margin-top: 30px;
   margin-left: 90px;
   margin-right: 30px;
@@ -110,20 +112,76 @@ div > li {
 }
 
 #tokyoLocation, #dubiaLocation, #parisLocation {
-  /* border: 1px solid black; */
+  color: #172815;
   margin-right: 40px;
   margin-bottom: 30px;
 }
 
 #limaLocation {
-  /* border: 1px solid black; */
+  color: #172815;
   margin-right: 30px;
   margin-bottom: 30px;
 }
 
+h3 {
+  font-size: 60px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: #83781B;
+  margin-bottom: 30px;
+}
+
+#cutter {
+  color: #172815;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 90px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+#fish, #frosted-cookie, #shirt {
+  color: #172815;
+  text-align: center;
+  margin-right: 40px;
+  margin-bottom: 30px;
+}
+
+
+
 /* **************************************Sales page************************************** */
+
+h1 {
+  font-size: 100px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: #83781B;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 
 table {
   font-family: Arial, Helvetica, sans-serif;
-  color: #8A84E2;
+  color: #3E5622;
+  background-color: #95B46A;
+  text-align: center;
+}
+
+section {
+  margin-top: 30px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #3E5622;
+}
+
+h2 {
+  font-size: 60px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: #83781B;
+  margin-bottom: 30px;
+}
+
+#addStore {
+    background-color: #95B46A;
 }
